@@ -1,0 +1,372 @@
+﻿*{
+    box-sizing:border-box;
+  
+}
+html{
+    scroll-behavior:smooth;
+}
+body {
+    /*Cambiar tipografia*/
+    font-family: 'Roboto',sans-serif;
+    /*Quitar margenes al body que tiene por defecto*/
+    margin: 0;
+   
+}
+/*se usa em porque es el tamaño relativo a la fuente elegida*/
+h1 {
+    font-size: 3.5em;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 2.7em;
+    font-weight: bold;
+}
+
+h3 {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+p {
+    font-size: 1.25em;
+}
+
+
+ul {
+    /*quitarle el formato a las listas*/
+    list-style: none;
+}
+li {
+    font-size: 2em;
+}
+
+button {
+    font-size: 1.5em;
+    /*Hacer letras en negritas*/
+    font-weight: bold;
+    /*espacio dentro del boton*/
+    padding: 10px 30px;
+    /*Redondea los bordes*/
+    border-radius: 10px;
+    /*Modificar borde*/
+    border: 1px solid rgba(0,0,0,5);
+    /*Modifiar sombras*/
+    box-shadow: 2px 2px 10px rgba(0,0,0,5);
+    /*Cambiar color de la fuente*/
+    color:white;
+    /*Cambiar color de fondo*/
+    background-color:blueviolet;
+}
+
+/*Accion cuando pasas mouse por encima del boton*/
+button:hover {
+        background-color: rgb(101,33,165);
+}
+
+.container{
+/*Ancho maximo(cuando llega a 1400px se centra automatico)*/
+    max-width:1400px;
+    margin:auto;
+
+}
+/*Creamos una clase para cambiar color de una parte del texto */
+.color-acento{color:blueviolet;}
+
+header{
+    background-color:rgb(245,245,245);
+
+}
+/*Clase de la imagen en header*/
+    header .logo {
+        margin: 0;
+        padding: 20px 20px;
+        font-weight: bold;
+        color: blueviolet;
+        font-size:3em;
+    }
+    header .container{
+       display:flex;
+        /*Hace que los elementos se organizen en columna*/
+       flex-direction:column;
+        /*centrar elementos*/
+        align-items:center;
+    }
+    header nav {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-bottom:25px;
+        }
+    header a {
+        padding: 5px 12px;
+        /*quitar formato a los links*/
+        text-decoration: none;
+        font-weight: bold;
+        color: black;
+    }
+    /*Cambiar color de letras cuanto pasas el mouse en el link*/
+    header a:hover {
+        color: blueviolet;
+    }
+
+#hero {
+    display: flex;
+    /*Por alguna razon hace el boton mas pequeño*/
+    align-items: center;
+    /*centra el contenido*/
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    /*cambia la altura relativa a la pantalla del dispositivo*/
+    height: 90vh;
+   
+    /*Insertar imagen linear-gradient pone un filtro negro a la imagen*/
+    background-image: linear-gradient( 0deg, rgb(0,0,0,0.5), rgb(0,0,0,0.5) ),url("../New Folder/prog.jpg");
+    /*que no se repita el fondo*/
+    background-repeat:no-repeat;
+    /*Que abarque todo no deje especios */
+    background-size:cover;
+    /*imagen siempre centrada*/
+    background-position:center center;
+}
+    #hero h1 {
+        color: white;
+        font-weight: bold;
+    }
+    #hero button{
+        font-size:1.75em;
+    }
+
+/*Modificamos segunda seccion*/
+#somos-proya .container {
+    text-align: center;
+    padding: 200px 12px;
+}
+/*Modificamos fondo de la tercera seccion*/
+#nuestros-programas {
+    background-color: rgb(30,30,30);
+    color: white;
+    text-align: center;
+}
+/*Modificamos tercera seccion*/
+    #nuestros-programas .container {
+        padding: 150px 12px;
+    }
+/*ocultamos los parrafos*/
+    #nuestros-programas p {
+        display: none;
+    }
+    #nuestros-programas h2 {
+    /*Quitar margenes que tiene predeterminado*/
+        margin-top: 0px;
+       font-size:3.2em;
+    }
+    #nuestros-programas .carta {
+        background-position: center center;
+        background-size: cover;
+        padding:50px 50px;
+        margin:20px 20px;
+        border-radius:15px;
+    }
+/*seleccionar primer hijo*(tienen que estar en un mismo div sin otras etiquetas)*/
+.carta:first-child {
+    background-image: linear-gradient( 0deg, rgb(0,0,0,0.5), rgb(0,0,0,0.5) ),url("../New Folder/front-end.jpg");
+   
+}
+/*seleccionar segundo hijo*/
+.carta:nth-child(2) {
+    background-image: linear-gradient( 0deg, rgb(0,0,0,0.5), rgb(0,0,0,0.5) ),url("../New Folder/full-stack.jpg");
+}
+/*seleccionar tercer hijo*/
+.carta:nth-child(3) {
+    background-image: linear-gradient( 0deg, rgb(0,0,0,0.5), rgb(0,0,0,0.5) ),url("../New Folder/python.jpg");
+}
+/*Modificar seccion de caracteristicas*/
+#caracteristicas .container{
+    text-align:center;
+    padding:200px 12px;
+}
+#caracteristicas li{
+    margin:16px 0px;
+    font-weight:bold;
+}
+
+#final{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+    height:80vh;
+    background-color:rgb(30,30,30);
+}
+#final h2{
+    font-size:9vw;
+}
+#final button{
+    font-size:5vw;
+}
+footer{
+    background-color:rgb(230,230,230);
+
+}
+    footer p {
+        margin: 0;
+        padding:12px;
+        color: rgb(100,100,100);
+        
+    }
+footer .container{
+    
+    height:150px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+}
+
+/*Cuando la pantalla supere los 720 px se aplican estos estilos*/
+@media(min-width:850px){
+
+    header .logo {
+        font-size: 3em;
+        padding: 0px 0px 0px 50px;
+    }
+    header{
+        /*hace que el header se quede fijo cuando scrollea*/
+        position:fixed;
+        width:100%;
+    }
+   
+    header .container{
+        /*Poner header en fila*/
+        flex-direction:row;
+        /*poner los elemntos en las esquinas*/
+        justify-content:space-between;
+    }
+    header nav{
+        /*Poner header en fila*/
+        flex-direction:row;
+        padding-bottom:0;
+        padding-right:20px;
+    }
+    li {
+        font-size: 3em;
+    }
+    #hero h1{
+        font-size:5em;
+    }
+
+    #somos-proya .container{
+        display:flex;
+        justify-content:space-evenly;
+    }
+    #somos-proya .img-container {
+        background-image: url("../New Folder/somos-proya.jpg");
+        background-size:cover;
+        background-position:center center;
+        height:500px;
+        width:600px;
+        }
+
+    #somos-proya h2{
+        margin-top:0px;
+    }
+    #somos-proya .texto{
+        width:50%;
+        text-align:initial;
+        padding-left:30px;
+        max-width:600px;
+        display:flex;
+        justify-content:center;
+        flex-direction:column;
+    }
+    #somos-proya .texto p {
+        text-align:justify;
+    }
+    
+    #nuestros-programas .programas{
+        display:flex;
+        justify-content:center;
+
+    }
+    #nuestros-programas .carta{
+        padding:50px;
+        background-size:100% 150px;
+        background-repeat:no-repeat;
+        background-position-y:0;
+        background-color:rgb(50,50,50,1);
+        box-shadow:2px 2px 10px rgba(0,0,0,0.5);
+       
+    }
+    #nuestros-programas h3{
+        margin-top:0;
+    }
+    #nuestros-programas h2{
+        font-size:4em;
+    }
+    #nuestros-programas p {
+        /*Mostrar parrafos*/
+       padding-top:30px;
+        display: block;
+        margin-bottom: 30px;
+        text-align:justify;
+        
+    }
+    .carta:first-child {
+        background-image: linear-gradient( 0deg, rgb(0,0,0,0.5), rgb(0,0,0,0.5) ),url("../New Folder/front-end-cropped.jpg");
+    }
+    /*seleccionar segundo hijo*/
+    .carta:nth-child(2) {
+        background-image: linear-gradient( 0deg, rgb(0,0,0,0.5), rgb(0,0,0,0.5) ),url("../New Folder/full-stack-cropped.jpg");
+    }
+    /*seleccionar tercer hijo*/
+    .carta:nth-child(3) {
+        background-image: linear-gradient( 0deg, rgb(0,0,0,0.5), rgb(0,0,0,0.5) ),url("../New Folder/python-cropped.jpg");
+    }
+    /*Modificar seccion de caracteristicas*/
+    #caracteristicas .container {
+        text-align: center;
+        padding: 200px 12px;
+    }
+    #caracteristicas {
+        background-image: url("../New Folder/cara.jpg");
+        background-repeat: no-repeat;
+        background-size: 500px 500px;
+        background-position:calc(100vw - 700px) 120px ;
+    }
+    #caracteristicas .container{
+        text-align:initial;
+
+    }
+    #caracteristicas ul{
+        margin-left:100px;
+    }
+    #final h2{
+        font-size:5em;
+    } 
+    #final button{
+        font-size:2em;
+    }
+    footer .container{
+        justify-content:flex-end;
+    }
+
+}
+@media(min-width:1200px){
+
+   
+    #caracteristicas {
+        background-position: calc(100vw - 800px);
+    }
+
+    #nuestros-programas p {
+       padding-top:80px;
+    }
+    header .logo {
+        font-size: 3em;
+        padding: 0px 0px 0px 50px;
+    }
+}

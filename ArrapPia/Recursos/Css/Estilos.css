@@ -1,0 +1,37 @@
+﻿.wrapper{
+    display:flex;
+    align-items:center;
+    flex-direction:column;
+    justify-content:center;
+    width:100%;
+    min-height:100%;
+    padding:20px;
+
+}
+
+#formcontent {
+    -webkit-border-radius: 10px 10px 10px 10px;
+    border-radius: 10px 10px 10px 10px;
+    background: #fff;
+    padding: 30px;
+    width: 90%;
+    max-width: 450px;
+    position: relative;
+    padding: 0px;
+    -webkit-box-shadow: 0px 30px 60px 0 rgba(0,0,0,0,3);
+    box-shadow: 0px 30px 60px 0 rgba(0,0,0,0,3);
+    text-align: center;
+}
+div.foto-Aboutus {
+    margin: 10px 20px;
+    box-shadow: 0 4px 8px 0 lightskyblue,0 6px 20px 0 rgba(0,0,0,0.19);
+    float: left;
+    width: 350px;
+    background-color:red;
+}
+
+    div.foto-Aboutus img {
+        width: 100%;
+        height: auto;
+        background-color: red;
+    }
